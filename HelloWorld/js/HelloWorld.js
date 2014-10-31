@@ -43,4 +43,20 @@ function opdracht3Contains(array, item) {
 }
 console.log("'3' zit wel in deze array " +
 "resultaat van opdracht3Contains is: " +
-        opdracht3Contains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+opdracht3Contains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+
+function opdracht3Add(array, item) {
+
+    console.log("Array inhoud voor toevoegen: " + array);
+
+    if (!opdracht3Contains(array,item)) {
+        array.push(item);
+        return array;
+    }
+    return item + " is niet toegevoegd. bestond al";
+}
+console.log("Array inhoud na toevoegen: " +
+            opdracht3Add([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11));
+console.log("Array inhoud na toevoegen: " +
+opdracht3Add([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
+
