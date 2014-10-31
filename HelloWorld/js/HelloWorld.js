@@ -73,7 +73,8 @@ function opdracht3Remove(array, item) {
                 array.splice(i, 1);
                 return array;
             }
-        }    }
+        }
+    }
     return item + " is niet verwijderd. bestond bestond niet";
 }
 console.log("Array inhoud na verwijderen: " +
