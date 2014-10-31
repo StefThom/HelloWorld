@@ -81,3 +81,22 @@ console.log("Array inhoud na verwijderen: " +
 opdracht3Remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11));
 console.log("Array inhoud na verwijderen: " +
 opdracht3Remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
+
+// Opdracht 3 array's Sommeer de inhoud van de array
+function opdracht3Sum(array) {
+
+    var totaal = 0;
+
+    console.log("De volgende getallen worden getotaliseerd: " + array);
+
+    for (var i = 0; i < array.length; i++) {
+        totaal += array[i];
+    }
+
+    return totaal;
+}
+console.log("Totaal van de getallen : " +
+opdracht3Sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log("Totaal van de Getallen : " +
+opdracht3Sum([15, 2, 53, 4, 102, 66, 77, 8, 19, 100]));
+
