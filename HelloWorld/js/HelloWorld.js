@@ -41,6 +41,6 @@ function opdracht3Contains(array, item) {
     }
     return false;
 }
-console.log("drie zit wel in deze array " +
+console.log("'3' zit wel in deze array " +
 "resultaat van opdracht3Contains is: " +
-        opdracht3Contains(["een", "twee", "drie","vier", "vijf", "zes"], "drie"));
+        opdracht3Contains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
