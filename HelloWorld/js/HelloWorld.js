@@ -62,3 +62,21 @@ console.log("Array inhoud na toevoegen: " +
 console.log("Array inhoud na toevoegen: " +
 opdracht3Add([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
 
+// Opdracht 3 array's verwijder meegegeven item
+function opdracht3Remove(array, item) {
+
+    console.log("Array inhoud voor verwijderen: " + array);
+
+    if (opdracht3Contains(array,item)) {
+        for(var i = array.length; i--;) {
+            if(array[i] == item) {
+                array.splice(i, 1);
+                return array;
+            }
+        }    }
+    return item + " is niet verwijderd. bestond bestond niet";
+}
+console.log("Array inhoud na verwijderen: " +
+opdracht3Remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11));
+console.log("Array inhoud na verwijderen: " +
+opdracht3Remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
