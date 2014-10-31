@@ -33,6 +33,7 @@ function opdracht2() {
 }
 console.log(opdracht2());
 
+// Opdracht 3 array's contains
 function opdracht3Contains(array, item) {
     for (var i = 0; i < array.length; i++) {
         if (array[i] === item) {
@@ -45,6 +46,7 @@ console.log("'3' zit wel in deze array " +
 "resultaat van opdracht3Contains is: " +
 opdracht3Contains([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
 
+// Opdracht 3 array's toevoegen als nog niet bestaat
 function opdracht3Add(array, item) {
 
     console.log("Array inhoud voor toevoegen: " + array);
