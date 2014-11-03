@@ -98,5 +98,5 @@ function opdracht3Sum(array) {
 console.log("Totaal van de getallen : " +
 opdracht3Sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 console.log("Totaal van de Getallen : " +
-opdracht3Sum([15, 2, 53, 4, 102, 66, 77, 8, 19, 100]));
+opdracht3Sum([15, 2, 53, 4, 102, 66, 77, 81, 19, 100]));
 
