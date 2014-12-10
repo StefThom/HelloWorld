@@ -109,14 +109,14 @@ opdracht3Sum([15, 2, 53, 4, 102, 66, 77, 81, 19, 100]));
 // Opdracht 4a Berekenen Celsius naar Fahrenheit en andersom
 function opdrachtCelciusNaarFahrenheit(gradenCelcius) {
 
-    var gradenFahrenheit = 0;
+    var gradenFahrenheit;
     gradenFahrenheit = gradenCelcius * 9/5 + 32;
 
     console.log(gradenCelcius + " graden Celcius is " + gradenFahrenheit + " graden Fahrenheit");
 }
 function opdrachtFahrenheitNaarCelcius(gradenFahrenheit) {
 
-    var gradenCelcius = 0;
+    var gradenCelcius ;
     gradenCelcius = (gradenFahrenheit -32) * 5/9;
 
     console.log(gradenFahrenheit + " graden Fahrenheit is " + gradenCelcius + " graden Celcius");
@@ -148,23 +148,31 @@ opdracht4Sum(15, 2, 53, 4, 102, 66, 77, 8, 19, 100));
 // Opdracht 4c tellen en tonen van letters in een woord
 function opdracht4LetterCount(invoer) {
 
-    var totaal = 0;
+    var voorkomensPerLetter = [];
     var letters = [];
-//    var invoer = "onmiddelijk";
+    var getrimdeInvoer;
+    var SPATIE = " ";
 
     console.log(invoer);
-    for (var i = 0; i < invoer.length; i++) {
-        console.log(invoer.charAt(i));
-        letters[invoer.charAt(i)] += 1;
-//        console.log(letters);
-        console.log(letters[invoer.charAt(i)]);
+    getrimdeInvoer = invoer.trim();
+    for (var i = 0; i < getrimdeInvoer.length; i++) {
+        var stringChar = getrimdeInvoer.charAt(i);
+        if (stringChar !== SPATIE)  {
+            if (voorkomensPerLetter[getrimdeInvoer.charAt(i)]) {
+                voorkomensPerLetter[getrimdeInvoer.charAt(i)]++;
+            } else {
+                voorkomensPerLetter[getrimdeInvoer.charAt(i)] = 1;
+                letters[getrimdeInvoer.charAt(i)] = getrimdeInvoer.charAt(i);
+            }
+        }
     }
-
-    for (var j = 0; j < letters.length; j++) {
-        console.log(letters.charAt(j) + ": " + letters[j])
+    for (var j in letters) {
+        if (letters.hasOwnProperty(j) && voorkomensPerLetter.hasOwnProperty(j)) {
+            console.log(letters[j] + ":" + voorkomensPerLetter[j]);
+        }
     }
-
-    return totaal;
 }
-opdracht4LetterCount("onmiddelijk");
 
+console.log("Opdracht 4c");
+opdracht4LetterCount("onmiddelijk");
+opdracht4LetterCount("wat een mooie opdracht");
