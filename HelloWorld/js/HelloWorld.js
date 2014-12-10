@@ -17,6 +17,7 @@ function mijnNaam() {
     };
     return "Mijn naam is: " + mij.voorNaam + " " + mij.achterNaam;
 }
+console.log("Opdracht 1");
 console.log(mijnNaam());
 
 // Opdracht 2 Expressies
@@ -31,6 +32,7 @@ function opdracht2() {
 
     return "Variabele expressies gedaan"
 }
+console.log("Opdracht 2");
 console.log(opdracht2());
 
 // Opdracht 3 array's contains
@@ -57,6 +59,7 @@ function opdracht3Add(array, item) {
     }
     return item + " is niet toegevoegd. bestond al";
 }
+console.log("Opdracht 3a");
 console.log("Array inhoud na toevoegen: " +
             opdracht3Add([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11));
 console.log("Array inhoud na toevoegen: " +
@@ -77,6 +80,7 @@ function opdracht3Remove(array, item) {
     }
     return item + " is niet verwijderd. bestond bestond niet";
 }
+console.log("Opdracht 3b");
 console.log("Array inhoud na verwijderen: " +
 opdracht3Remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11));
 console.log("Array inhoud na verwijderen: " +
@@ -95,8 +99,71 @@ function opdracht3Sum(array) {
 
     return totaal;
 }
+console.log("Opdracht 3c");
 console.log("Totaal van de getallen : " +
 opdracht3Sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 console.log("Totaal van de Getallen : " +
 opdracht3Sum([15, 2, 53, 4, 102, 66, 77, 8, 19, 100]));
 
+
+// Opdracht 4a Berekenen Celsius naar Fahrenheit en andersom
+function opdrachtCelciusNaarFahrenheit(gradenCelcius) {
+
+    var gradenFahrenheit = 0;
+    gradenFahrenheit = gradenCelcius * 9/5 + 32;
+
+    console.log(gradenCelcius + " graden Celcius is " + gradenFahrenheit + " graden Fahrenheit");
+}
+function opdrachtFahrenheitNaarCelcius(gradenFahrenheit) {
+
+    var gradenCelcius = 0;
+    gradenCelcius = (gradenFahrenheit -32) * 5/9;
+
+    console.log(gradenFahrenheit + " graden Fahrenheit is " + gradenCelcius + " graden Celcius");
+}
+
+console.log("Opdracht 4a");
+opdrachtCelciusNaarFahrenheit(20);
+opdrachtFahrenheitNaarCelcius(68);
+
+
+// Opdracht 4b Sommeer de meegegeven parameters
+function opdracht4Sum() {
+
+    var totaal = 0;
+
+    for (var i = 0; i < arguments.length; i++) {
+        totaal += arguments[i];
+    }
+
+    return totaal;
+}
+console.log("Opdracht 4b");
+console.log("Totaal van de getallen : " +
+opdracht4Sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+console.log("Totaal van de Getallen : " +
+opdracht4Sum(15, 2, 53, 4, 102, 66, 77, 8, 19, 100));
+
+
+// Opdracht 4c tellen en tonen van letters in een woord
+function opdracht4LetterCount(invoer) {
+
+    var totaal = 0;
+    var letters = [];
+//    var invoer = "onmiddelijk";
+
+    console.log(invoer);
+    for (var i = 0; i < invoer.length; i++) {
+        console.log(invoer.charAt(i));
+        letters[invoer.charAt(i)] += 1;
+//        console.log(letters);
+        console.log(letters[invoer.charAt(i)]);
+    }
+
+    for (var j = 0; j < letters.length; j++) {
+        console.log(letters.charAt(j) + ": " + letters[j])
+    }
+
+    return totaal;
+}
+opdracht4LetterCount("onmiddelijk");
