@@ -167,3 +167,4 @@ function opdracht4LetterCount(invoer) {
     return totaal;
 }
 opdracht4LetterCount("onmiddelijk");
+
